@@ -1,0 +1,7 @@
+name: setwebhook
+on: workflow_dispatch
+jobs:
+  set:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -s "https://api.telegram.org/bot${{ secrets.TGTOKEN }}/setWebhook?url=https://s1dle-bot.sap20102003.workers.dev/webhook"
